@@ -10,6 +10,6 @@ app.post('/message', (req: Request, res: Response) => {
     const { message, queueName } = req.body
     const messager = new MessageBroker()
     messager.sendMessage(message, queueName)
-    res.send({ message, queueName })
+    return res.send({ message, queueName })
 })
 app.listen(Variables.APP_PORT, () => console.log(`App running on port: ${Variables.APP_PORT}`))
