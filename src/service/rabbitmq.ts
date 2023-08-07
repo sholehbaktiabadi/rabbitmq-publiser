@@ -22,7 +22,6 @@ export class MessageBroker{
     
             setTimeout(() => {
                 connection.close();
-                process.exit(0);
             }, 500);
         } catch (error) {
             console.error(error)
